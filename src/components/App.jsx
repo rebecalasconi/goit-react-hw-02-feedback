@@ -3,6 +3,7 @@ import FeedbackOptions from './FeedbackOptions'
 import Section from './Section'
 import Statistics from './Statistics'
 import Notification  from './Notification';
+import PropTypes from 'prop-types';
 
 class App extends Component {
   state= {
@@ -58,5 +59,11 @@ render () {
   </div>
 );
 }}
+
+App.propTypes = {
+  options:
+  PropTypes.arrayOf(PropTypes.string).isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+}
 
 export default App;
